@@ -29,6 +29,7 @@
     --contacts-text-color: rgba(255, 255, 255, 0.6);
     --secondary-bgc-color: #F5F4FA;
     --footer-color: #2F303A;
+    --primary-cubic: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 h1,
@@ -169,6 +170,10 @@ img {
     display: inline-block;
     fill: currentColor;
     margin-right: 10px;
+}
+
+.color-effect {
+    transition: color 1000ms var(--primary-cubic);
 }
 
 .contacts .link {
@@ -544,10 +549,11 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.ftr:hover,
+
+/* .ftr:hover,
 .ftr:focus {
     background-color: var(--accent-color);
-}
+} */
 
 
 /* Кнопки */
