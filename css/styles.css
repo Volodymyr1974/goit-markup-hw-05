@@ -155,6 +155,18 @@ img {
 
 .site-nav .link.current {
     color: var(--accent-color);
+    position: relative;
+}
+
+.current::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0%;
+    background-color: currentColor;
+    border-radius: 2px;
 }
 
 
@@ -318,6 +330,28 @@ img {
     margin-bottom: 50px;
 }
 
+.works.list .item {
+    position: relative;
+}
+
+.work {
+    position: absolute;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.work-text {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--white-color-bgc-text);
+}
+
 
 /* Наша команда */
 
@@ -378,6 +412,8 @@ img {
     justify-content: center;
     align-items: center;
     fill: #AFB1B8;
+    background-color: var(--white-color-bgc-text);
+    transition: fill 1000ms var(--primary-cubic), background-color 1000ms var(--primary-cubic);
 }
 
 .social-icon:hover,
@@ -413,6 +449,7 @@ img {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #AFB1B8;
+    transition: fill 1000ms var(--primary-cubic), border 1000ms var(--primary-cubic);
 }
 
 .customers-link:hover,
@@ -574,6 +611,8 @@ img {
     padding-right: 22px;
     border: 0;
     border-radius: 4px;
+    box-shadow: none;
+    transition: background-color 1000ms var(--primary-cubic), color 1000ms var(--primary-cubic), box-shadow 1000ms var(--primary-cubic);
 }
 
 .btn:hover,
