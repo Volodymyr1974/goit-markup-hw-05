@@ -146,7 +146,7 @@
         width: 100%;
         height: 4px;
         left: 0;
-        bottom: 0%;
+        bottom: -1%;
         background-color: currentColor;
         border-radius: 2px;
     }
@@ -308,13 +308,14 @@
     
     .work {
         position: absolute;
-        padding-top: 27px;
-        padding-bottom: 27px;
-        text-align: center;
-        background: rgba(47, 48, 58, 0.8);
+        display: flex;
+        height: 70px;
         width: 100%;
         left: 0;
         bottom: 0;
+        justify-content: center;
+        align-items: center;
+        background: rgba(47, 48, 58, 0.8);
     }
     
     .work-text {
@@ -468,6 +469,7 @@
         display: block;
         color: var(--primary-text-color);
         text-decoration: none;
+        border: 1px solid #EEEEEE;
     }
     
     .portfolio-link:hover,
@@ -494,7 +496,8 @@
         transition: transform 250ms var(--primary-cubic);
     }
     
-    .portfolio-link:hover .card-overlay {
+    .portfolio-link:hover .card-overlay,
+    .portfolio-link:focus .card-overlay {
         transform: translatey(0);
     }
     
@@ -590,7 +593,7 @@
         border: 0;
         border-radius: 4px;
         box-shadow: none;
-        transition: background-color 250ms var(--primary-cubic), color 250ms var(--primary-cubic), box-shadow 1000ms var(--primary-cubic);
+        transition: background-color 250ms var(--primary-cubic), color 250ms var(--primary-cubic), box-shadow 250ms var(--primary-cubic);
     }
     
     .btn:hover,
